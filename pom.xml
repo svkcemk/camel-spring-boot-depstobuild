@@ -22,7 +22,7 @@
 
     <groupId>org.apache.camel.springboot</groupId>
     <artifactId>depstobuild-generator</artifactId>
-    <version>3.20.1</version>
+    <version>3.20.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Camel Spring Boot DepsToBuild</name>
     <description>Dependencies to build generation for the Camel and the Camel Spring Boot project</description>
