@@ -24,7 +24,7 @@
             <!-- The main BOM to productize -->
             <bom>org.apache.camel.springboot:camel-spring-boot-bom:${camel-spring-boot.version}</bom>
             <!-- the report file -->
-            <outputFile>deps-to-build-csb.txt</outputFile>
+            <outputFile>target/deps-to-build-csb.txt</outputFile>
 
             <!-- log code repo info -->
             <logCodeRepos>true</logCodeRepos>

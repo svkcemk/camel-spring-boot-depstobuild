@@ -24,7 +24,7 @@
             <!-- The main BOM to productize -->
             <bom>org.apache.camel:camel-parent:${camel.version}</bom>
             <!-- the report file -->
-            <outputFile>deps-to-build-camel.txt</outputFile>
+            <outputFile>target/deps-to-build-camel.txt</outputFile>
             
             <!-- log code repo info -->
             <logCodeRepos>true</logCodeRepos>
