@@ -58,11 +58,6 @@
  
             <!-- Exclude dependencies with specific groupIds -->
             <excludeGroupIds>
-              <!-- Exclude all camel -->
-              <groupId>org.apache.camel</groupId>
-              <groupId>org.apache.camel.springboot</groupId>
-
-              <!-- Exclude all springframework -->
               <groupId>org.springframework</groupId>
               <groupId>org.springframework.amqp</groupId>
               <groupId>org.springframework.batch</groupId>
