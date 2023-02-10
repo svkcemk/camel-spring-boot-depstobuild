@@ -1,0 +1,299 @@
+dependencyResolutionConfig:
+    analyzeBOM: org.apache.camel:camel-parent:3.20.1.redhat-00008
+    includeOptionalDependencies: true
+    includeArtifacts:
+        - io.opentelemetry:*:*
+    excludeArtifacts:
+        - org.springframework:*:*
+        - org.springframework.amqp:*:*
+        - org.springframework.batch:*:*
+        - org.springframework.boot:*:*
+        - org.springframework.cloud:*:*
+        - org.springframework.data:*:*
+        - org.springframework.data.build:*:*
+        - org.springframework.integration:*:*
+        - org.springframework.ldap:*:*
+        - org.springframework.security:*:*
+        - org.springframework.session:*:*
+        - org.springframework.vault:*:*
+        - org.springframework.ws:*:*
+        - org.apache.camel:camel-spring:*
+        - org.apache.camel:camel-spring-main:*
+        - org.apache.camel:camel-groovy:*
+        - org.apache.camel:camel-ipfs:*
+        - org.apache.camel:camel-jetty-common:*
+        - org.apache.camel:camel-jetty:*
+        - org.apache.camel:camel-undertow:*
+        - org.apache.camel:camel-service:*
+        - org.apache.camel:camel-activemq:*
+        - org.apache.camel:camel-any23:*
+        - org.apache.camel:camel-arangodb:*
+        - org.apache.camel:camel-as2:*
+        - org.apache.camel:camel-asn1:*
+        - org.apache.camel:camel-asterisk:*
+        - org.apache.camel:camel-atlasmap:*
+        - org.apache.camel:camel-atmos:*
+        - org.apache.camel:camel-atmosphere-websocket:*
+        - org.apache.camel:camel-atom:*
+        - org.apache.camel:camel-avro-rpc:*
+        - org.apache.camel:camel-barcode:*
+        - org.apache.camel:camel-base64:*
+        - org.apache.camel:camel-bonita:*
+        - org.apache.camel:camel-box:*
+        - org.apache.camel:camel-braintree:*
+        - org.apache.camel:camel-caffeine:*
+        - org.apache.camel:camel-caffeine-lrucache:*
+        - org.apache.camel:camel-cbor:*
+        - org.apache.camel:camel-cdi:*
+        - org.apache.camel:camel-cdi-main:*
+        - org.apache.camel:camel-cdi-jta:*
+        - org.apache.camel:camel-chatscript:*
+        - org.apache.camel:camel-chunk:*
+        - org.apache.camel:camel-cm-sms:*
+        - org.apache.camel:camel-cmis:*
+        - org.apache.camel:camel-coap:*
+        - org.apache.camel:camel-cometd:*
+        - org.apache.camel:camel-consul:*
+        - org.apache.camel:camel-corda:*
+        - org.apache.camel:camel-couchbase:*
+        - org.apache.camel:camel-couchdb:*
+        - org.apache.camel:camel-crypto:*
+        - org.apache.camel:camel-csimple-joor:*
+        - org.apache.camel:camel-csv:*
+        - org.apache.camel:camel-datasonnet:*
+        - org.apache.camel:camel-debug:*
+        - org.apache.camel:camel-debezium:*
+        - org.apache.camel:camel-digitalocean:*
+        - org.apache.camel:camel-disruptor:*
+        - org.apache.camel:camel-djl:*
+        - org.apache.camel:camel-dns:*
+        - org.apache.camel:camel-docker:*
+        - org.apache.camel:camel-dozer:*
+        - org.apache.camel:camel-drill:*
+        - org.apache.camel:camel-dropbox:*
+        - org.apache.camel:camel-dynamic-router:*
+        - org.apache.camel:camel-ehcache:*
+        - org.apache.camel:camel-elasticsearch-rest:*
+        - org.apache.camel:camel-elytron:*
+        - org.apache.camel:camel-etcd3:*
+        - org.apache.camel:camel-exec:*
+        - org.apache.camel:camel-facebook:*
+        - org.apache.camel:camel-fastjson:*
+        - org.apache.camel:camel-file-watch:*
+        - org.apache.camel:camel-flatpack:*
+        - org.apache.camel:camel-flink:*
+        - org.apache.camel:camel-fop:*
+        - org.apache.camel:camel-freemarker:*
+        - org.apache.camel:camel-geocoder:*
+        - org.apache.camel:camel-git:*
+        - org.apache.camel:camel-github:*
+        - org.apache.camel:camel-gora:*
+        - org.apache.camel:camel-grape:*
+        - org.apache.camel:camel-graphql:*
+        - org.apache.camel:camel-grok:*
+        - org.apache.camel:camel-grpc:*
+        - org.apache.camel:camel-guava-eventbus:*
+        - org.apache.camel:camel-hashicorp-vault:*
+        - org.apache.camel:camel-hazelcast:*
+        - org.apache.camel:camel-hbase:*
+        - org.apache.camel:camel-hdfs:*
+        - org.apache.camel:camel-headersmap:*
+        - org.apache.camel:camel-huawei:*
+        - org.apache.camel:camel-hyperledger-aries:*
+        - org.apache.camel:camel-ical:*
+        - org.apache.camel:camel-iec60870:*
+        - org.apache.camel:camel-ignite:*
+        - org.apache.camel:camel-influxdb:*
+        - org.apache.camel:camel-influxdb2:*
+        - org.apache.camel:camel-iota:*
+        - org.apache.camel:camel-irc:*
+        - org.apache.camel:camel-ironmq:*
+        - org.apache.camel:camel-jasypt:*
+        - org.apache.camel:camel-javascript:*
+        - org.apache.camel:camel-jbpm:*
+        - org.apache.camel:camel-jcache:*
+        - org.apache.camel:camel-jclouds:*
+        - org.apache.camel:camel-jcr:*
+        - org.apache.camel:camel-jdbc:*
+        - org.apache.camel:camel-jgroups-raft:*
+        - org.apache.camel:camel-jgroups:*
+        - org.apache.camel:camel-jmx:*
+        - org.apache.camel:camel-johnzon:*
+        - org.apache.camel:camel-jolt:*
+        - org.apache.camel:camel-joor:*
+        - org.apache.camel:camel-jq:*
+        - org.apache.camel:camel-jsch:*
+        - org.apache.camel:camel-json-validator:*
+        - org.apache.camel:camel-jsonapi:*
+        - org.apache.camel:camel-jsonata:*
+        - org.apache.camel:camel-jsonb:*
+        - org.apache.camel:camel-json-patch:*
+        - org.apache.camel:camel-jt400:*
+        - org.apache.camel:camel-kudu:*
+        - org.apache.camel:camel-ldap:*
+        - org.apache.camel:camel-ldif:*
+        - org.apache.camel:camel-leveldb:*
+        - org.apache.camel:camel-lra:*
+        - org.apache.camel:camel-lucene:*
+        - org.apache.camel:camel-lumberjack:*
+        - org.apache.camel:camel-lzf:*
+        - org.apache.camel:camel-metrics:*
+        - org.apache.camel:camel-micrometer:*
+        - org.apache.camel:camel-milo:*
+        - org.apache.camel:camel-mina:*
+        - org.apache.camel:camel-mongodb-gridfs:*
+        - org.apache.camel:camel-mustache:*
+        - org.apache.camel:camel-mvel:*
+        - org.apache.camel:camel-mybatis:*
+        - org.apache.camel:camel-netty-http:*
+        - org.apache.camel:camel-nitrite:*
+        - org.apache.camel:camel-oaipmh:*
+        - org.apache.camel:camel-ognl:*
+        - org.apache.camel:camel-olingo2:*
+        - org.apache.camel:camel-olingo4:*
+        - org.apache.camel:camel-openstack:*
+        - org.apache.camel:camel-opentracing:*
+        - org.apache.camel:camel-optaplanner:*
+        - org.apache.camel:camel-pdf:*
+        - org.apache.camel:camel-pg-replication-slot:*
+        - org.apache.camel:camel-pgevent:*
+        - org.apache.camel:camel-plc4x:*
+        - org.apache.camel:camel-printer:*
+        - org.apache.camel:camel-protobuf:*
+        - org.apache.camel:camel-pubnub:*
+        - org.apache.camel:camel-pulsar:*
+        - org.apache.camel:camel-python:*
+        - org.apache.camel:camel-quickfix:*
+        - org.apache.camel:camel-rabbitmq:*
+        - org.apache.camel:camel-reactive-executor-tomcat:*
+        - org.apache.camel:camel-reactive-executor-vertx:*
+        - org.apache.camel:camel-reactive-streams:*
+        - org.apache.camel:camel-reactor:*
+        - org.apache.camel:camel-redis:*
+        - org.apache.camel:camel-resourceresolver-github:*
+        - org.apache.camel:camel-resteasy:*
+        - org.apache.camel:camel-robotframework:*
+        - org.apache.camel:camel-rocketmq:*
+        - org.apache.camel:camel-rss:*
+        - org.apache.camel:camel-rxjava:*
+        - org.apache.camel:camel-sap-netweaver:*
+        - org.apache.camel:camel-schematron:*
+        - org.apache.camel:camel-servicenow:*
+        - org.apache.camel:camel-shiro:*
+        - org.apache.camel:camel-sjms2:*
+        - org.apache.camel:camel-sjms:*
+        - org.apache.camel:camel-smpp:*
+        - org.apache.camel:camel-snakeyaml:*
+        - org.apache.camel:camel-snmp:*
+        - org.apache.camel:camel-solr:*
+        - org.apache.camel:camel-spark:*
+        - org.apache.camel:camel-splunk:*
+        - org.apache.camel:camel-splunk-hec:*
+        - org.apache.camel:camel-spring-batch:*
+        - org.apache.camel:camel-spring-integration:*
+        - org.apache.camel:camel-spring-jdbc:*
+        - org.apache.camel:camel-spring-ldap:*
+        - org.apache.camel:camel-spring-rabbitmq:*
+        - org.apache.camel:camel-spring-redis:*
+        - org.apache.camel:camel-spring-security:*
+        - org.apache.camel:camel-spring-ws:*
+        - org.apache.camel:camel-ssh:*
+        - org.apache.camel:camel-stax:*
+        - org.apache.camel:camel-stomp:*
+        - org.apache.camel:camel-stream:*
+        - org.apache.camel:camel-stringtemplate:*
+        - org.apache.camel:camel-stitch:*
+        - org.apache.camel:camel-swagger-java:*
+        - org.apache.camel:camel-swift:*
+        - org.apache.camel:camel-syslog:*
+        - org.apache.camel:camel-tarfile:*
+        - org.apache.camel:camel-threadpoolfactory-vertx:*
+        - org.apache.camel:camel-thrift:*
+        - org.apache.camel:camel-tika:*
+        - org.apache.camel:camel-twilio:*
+        - org.apache.camel:camel-twitter:*
+        - org.apache.camel:camel-undertow-spring-security:*
+        - org.apache.camel:camel-univocity-parsers:*
+        - org.apache.camel:camel-wal:*
+        - org.apache.camel:camel-weather:*
+        - org.apache.camel:camel-web3j:*
+        - org.apache.camel:camel-websocket-jsr356:*
+        - org.apache.camel:camel-websocket:*
+        - org.apache.camel:camel-weka:*
+        - org.apache.camel:camel-whatsapp:*
+        - org.apache.camel:camel-wordpress:*
+        - org.apache.camel:camel-workday:*
+        - org.apache.camel:camel-xchange:*
+        - org.apache.camel:camel-xj:*
+        - org.apache.camel:camel-xmlsecurity:*
+        - org.apache.camel:camel-xmpp:*
+        - org.apache.camel:camel-xslt-saxon:*
+        - org.apache.camel:camel-xstream:*
+        - org.apache.camel:camel-zendesk:*
+        - org.apache.camel:camel-zipkin:*
+        - org.apache.camel:camel-zookeeper-master:*
+        - org.apache.camel:camel-zookeeper:*
+        - org.apache.camel:camel-rest-swagger:*
+        - org.apache.camel:camel-jooq:*
+
+buildConfigGeneratorConfig:
+    defaultValues:
+        environmentName: "OpenJDK 11.0; Mvn 3.5.4"
+    failGeneratedBuildScript: false
+    scmReplaceWithPlaceholder:
+        - "forge.fusesource.com/mvnplugins.git"
+        - "google-maven-repository.googlecode.com/svn"
+        - "svn.apache.org"
+        - "github.com/sonatype/jvnet-parent"
+        - "code.google.com/p"
+
+    scmPattern:
+        "git@github.com:": "https://github.com/"
+    # scmMapping:
+        # "git.eclipse.org/gitroot/sisu/org.eclipse.sisu.inject.git": "https://code.engineering.redhat.com/gerrit/sisu/org.eclipse.sisu.plexus.git"
+        # "git.eclipse.org/gitroot/sisu/org.eclipse.sisu.plexus.git": "https://code.engineering.redhat.com/gerrit/sisu/org.eclipse.sisu.plexus.git"
+        # "github.com/apache/httpcore.git": "https://code.engineering.redhat.com/gerrit/apache/httpcore.git"
+        # "github.com/apache/maven.git": "https://code.engineering.redhat.com/gerrit/apache/maven.git"
+        # "github.com/google/guava.git": "https://code.engineering.redhat.com/gerrit/google/guava.git"
+        # "github.com/google/guice.git": "https://code.engineering.redhat.com/gerrit/google/guice.git"
+        # "github.com/apache/kafka.git": "https://code.engineering.redhat.com/gerrit/apache/kafka.git"
+        # "github.com/graphql-java/graphql-java.git": "https://code.engineering.redhat.com/gerrit/graphql-java/graphql-java.git"
+        # "github.com/graphql-java/java-dataloader.git": "https://code.engineering.redhat.com/gerrit/graphql-java/java-dataloader.git"
+        # "github.com/infinispan/infinispan.git": "https://code.engineering.redhat.com/gerrit/infinispan/infinispan.git"
+        # "github.com/netty/netty.git": "https://code.engineering.redhat.com/gerrit/netty/netty.git"
+        # "github.com/protocolbuffers/protobuf.git": "http://code.engineering.redhat.com/gerrit/protocolbuffers/protobuf.git"
+        # "github.com/apache/thrift.git": "https://code.stage.engineering.redhat.com/gerrit/apache/thrift.git"
+        # "github.com/ReactiveX/RxJava.git": "https://code.engineering.redhat.com/gerrit/ReactiveX/RxJava.git"
+        # "github.com/grpc/grpc-java.git": "https://code.engineering.redhat.com/gerrit/grpc/grpc-java.git"
+        # "github.com/reactive-streams/reactive-streams-jvm.git": "https://code.engineering.redhat.com/gerrit/reactive-streams/reactive-streams-jvm.git"
+        # "https://gitlab.ow2.org/asm/asm.git#somebodycreated_duplicate_internal_repo": "https://gitlab.ow2.org/asm/asm.git" # WUT?
+        # "android.kernel.org/platform/manifest": "https://android.googlesource.com/platform/manifest"
+        # "gitbox.apache.org/repos/asf?p=commons-codec": "https://gitbox.apache.org/repos/asf/commons-codec.git"
+
+
+
+    pigTemplate:
+        product:
+            name: Camel Extensions for Quarkus Third Party Components
+            abbreviation: ceq-third-party
+            stage: GA
+            issueTrackerUrl: https://issues.redhat.com/projects/CEQ
+        version: 2.13.0
+        milestone: CQ1
+        group: Camel Extensions for Quarkus Third Party Components
+        builds:
+            -
+        flow:
+            licensesGeneration:
+                strategy: IGNORE
+            repositoryGeneration:
+                strategy: IGNORE
+            javadocGeneration:
+                strategy: IGNORE
+            sourcesGeneration:
+                strategy: IGNORE
+        outputPrefixes:
+            releaseFile: ab-example
+            releaseDir: ab-example
+        addons:
+            notYetAlignedFromDependencyTree:
