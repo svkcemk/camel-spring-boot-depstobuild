@@ -1,8 +1,8 @@
 dependencyResolutionConfig:
-    analyzeBOM: org.apache.camel:camel-parent:3.20.1.redhat-00008
+    analyzeBOM: org.apache.camel:camel-parent:3.20.1.redhat-00010
     includeOptionalDependencies: true
     includeArtifacts:
-        - io.opentelemetry:*:*
+        - org.junit:junit-bom:*
     excludeArtifacts:
         - org.springframework:*:*
         - org.springframework.amqp:*:*
@@ -17,6 +17,43 @@ dependencyResolutionConfig:
         - org.springframework.session:*:*
         - org.springframework.vault:*:*
         - org.springframework.ws:*:*
+        # Skip infinispan - other groups build it
+        - org.infinispan:*:*
+        - org.infinispan.server:*:*
+        # Jackson needs to be built separately
+        - com.fasterxml.jackson:*:*
+        - com.fasterxml.jackson:jackson-bom:*
+        - com.fasterxml.jackson:jackson-parent:*
+        - com.fasterxml.jackson.module:*:*
+        - com.fasterxml.jackson.jaxrs:*:*
+        - com.fasterxml.jackson.core:*:*
+        - com.fasterxml.jackson.jaxrs:*:*
+        - com.fasterxml.jackson.dataformat:*:*
+        - com.fasterxml.jackson.datatype:*:*
+        # Elasticsearch has licensing issues
+        - org.elasticsearch.client:*:*
+        - org.elasticsearch.distrinbution:*:*
+        - org.elasticsearch.plugin:*:*
+        - org.elasticsearch:*:*
+        # jffi - needs native brew build
+        - com.github.jnr:*:*
+        # freemarker
+        - org.freemarker:*:*
+        # okio
+        - com.squareup.okio:*:*
+        # opencensus
+        - io.opencensus:*:*
+        # glassfish, needs brew build
+        - org.glassfish:*:*
+        # typesafe 
+        - com.typesafe:*:*
+        # sonatype plexus cipher (no tag)
+        - org.sonatype.plexus:plexus-cipher:*
+        # grpc
+        - io.grpc:*:*
+        # vertx build by other groups
+        - io.vertx:*:*
+        # camel
         - org.apache.camel:camel-spring:*
         - org.apache.camel:camel-spring-main:*
         - org.apache.camel:camel-groovy:*
