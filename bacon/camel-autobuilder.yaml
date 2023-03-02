@@ -1,8 +1,8 @@
 dependencyResolutionConfig:
-    analyzeBOM: org.apache.camel:camel-parent:3.20.1.redhat-00010
+    analyzeBOM: org.apache.camel:camel-parent:3.20.1.redhat-00012
     includeOptionalDependencies: true
     includeArtifacts:
-        - org.junit:junit-bom:*
+        - dummy:dummy:*
     excludeArtifacts:
         - org.springframework:*:*
         - org.springframework.amqp:*:*
