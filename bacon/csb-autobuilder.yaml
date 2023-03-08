@@ -91,7 +91,7 @@ dependencyResolutionConfig:
         - org.apache.camel.springboot:camel-braintree-starter:*
         - org.apache.camel.springboot:camel-caffeine-lrucache-starter:*
         - org.apache.camel.springboot:camel-caffeine-starter:*
-        - org.apache.camel.springboot:camel-catalog-provider-springboot
+        - org.apache.camel.springboot:camel-catalog-provider-springboot:*
         - org.apache.camel.springboot:camel-cbor-starter:*
         - org.apache.camel.springboot:camel-chatscript-starter:*
         - org.apache.camel.springboot:camel-chunk-starter:*
@@ -177,7 +177,7 @@ dependencyResolutionConfig:
         - org.apache.camel.springboot:camel-ipfs-starter:*
         - org.apache.camel.springboot:camel-irc-starter:*
         - org.apache.camel.springboot:camel-ironmq-starter:*
-        - org.apache.camel.springboot:camel-itest-spring-boot
+        - org.apache.camel.springboot:camel-itest-spring-boot:*
         - org.apache.camel.springboot:camel-jasypt-starter:*
         - org.apache.camel.springboot:camel-javascript-starter:*
         - org.apache.camel.springboot:camel-jbpm-starter:*
