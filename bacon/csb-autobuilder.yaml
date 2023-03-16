@@ -3,6 +3,8 @@ dependencyResolutionConfig:
     includeOptionalDependencies: true
     includeArtifacts:
         - dummy:dummy:*
+    recipeRepos:
+        - https://github.com/jboss-fuse/camel-spring-boot-depstobuild
     excludeArtifacts:
         - org.springframework:*:*
         - org.springframework.amqp:*:*
@@ -548,7 +550,10 @@ buildConfigGeneratorConfig:
 
     scmPattern:
         "git@github.com:": "https://github.com/"
-    # scmMapping:
+    scmMapping:
+        "github.com/sonatype/jvnet-parent": "https://github.com/sonatype/oss-parents"
+        #"https://gitorious.ow2.org/ow2/pom.git"
+
         # "git.eclipse.org/gitroot/sisu/org.eclipse.sisu.inject.git": "https://code.engineering.redhat.com/gerrit/sisu/org.eclipse.sisu.plexus.git"
         # "git.eclipse.org/gitroot/sisu/org.eclipse.sisu.plexus.git": "https://code.engineering.redhat.com/gerrit/sisu/org.eclipse.sisu.plexus.git"
         # "github.com/apache/httpcore.git": "https://code.engineering.redhat.com/gerrit/apache/httpcore.git"
@@ -578,7 +583,7 @@ buildConfigGeneratorConfig:
             stage: GA
             issueTrackerUrl: https://issues.redhat.com/projects/CEQ
         version: 2.13.0
-        milestone: CQ1
+        milestone: CSB1
         group: Camel Extensions for Quarkus Third Party Components
         builds:
             -
