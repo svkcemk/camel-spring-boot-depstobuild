@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/apache/geronimo-genesis.git"
+tagMapping:
+  - pattern: (.*)
+    tag: genesis-$1
