@@ -1,4 +1,6 @@
 ---
 type: "git"
 uri: "https://github.com/apache/geronimo-specs.git"
-
+tagMapping:
+  - pattern: (.*)
+    tag: trunk

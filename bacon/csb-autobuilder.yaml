@@ -22,6 +22,13 @@ dependencyResolutionConfig:
         # Skip infinispan - other groups build it
         - org.infinispan:*:*
         - org.infinispan.server:*:*
+        # Skip javax.annotation:jsr250-api - cannot find repo
+        - javax.annotation:jsr250-api:*
+        # Skip xpp3:xpp3 - cannot find repo
+        - xpp3:xpp3:* 
+        - xpp3:xpp3_xpath:*
+        # Skip org.apache.geronimo.specs:geronimo-jms_2.0_spec - built already in brew
+        - org.apache.geronimo.specs:geronimo-jms_2.0_spec:*
         # Jackson needs to be built separately
         - com.fasterxml.jackson:*:*
         - com.fasterxml.jackson:jackson-bom:*
