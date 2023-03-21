@@ -28,6 +28,7 @@ dependencyResolutionConfig:
         - xpp3:xpp3:* 
         - xpp3:xpp3_xpath:*
         # skip xmlresolver:xmlresolver - cannot find repo
+        - xml-resolver:xml-resolver:*
         - xmlresolver:xmlresolver:*
         # Cannot find a github for xml-apis:xml-apis - can only find svn
         - xml-apis:xml-apis:*
