@@ -27,8 +27,14 @@ dependencyResolutionConfig:
         # Skip xpp3:xpp3 - cannot find repo
         - xpp3:xpp3:* 
         - xpp3:xpp3_xpath:*
-        # Skip org.apache.geronimo.specs:geronimo-jms_2.0_spec - built already in brew
-        - org.apache.geronimo.specs:geronimo-jms_2.0_spec:*
+        # skip xmlresolver:xmlresolver - cannot find repo
+        - xmlresolver:xmlresolver:*
+        # Cannot find a github for xml-apis:xml-apis - can only find svn
+        - xml-apis:xml-apis:*
+        # Cannot find com.google:google:1 tag in repo - first tag is 2
+        - com.google:google:1 
+        # com.google.apis:google-api-services-bigquery - not sure how to map SNAPSHOT
+        - com.google.apis:google-api-services-bigquery:*
         # Jackson needs to be built separately
         - com.fasterxml.jackson:*:*
         - com.fasterxml.jackson:jackson-bom:*
