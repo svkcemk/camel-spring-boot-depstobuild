@@ -22,6 +22,12 @@ dependencyResolutionConfig:
         # Skip infinispan - other groups build it
         - org.infinispan:*:*
         - org.infinispan.server:*:*
+        # Skip org.jetbrains:annotations - gigantic repo, cannot find tags that correspond to artifacts
+        - org.jetbrains:annotations:*
+        # Skip wsdl4j-wsdl4j - no github repo
+        - wsdl4j:wsdl4j:*
+        # Skip org.apache.httpcomponents-project
+        - org.apache.httpcomponents:project:*
         # Skip javax.annotation:jsr250-api - cannot find repo
         - javax.annotation:jsr250-api:*
         # Skip xpp3:xpp3 - cannot find repo
