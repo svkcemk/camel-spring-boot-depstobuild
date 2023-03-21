@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/google/google-maven-parents.git"
+tagMapping:
+  - pattern: (.*)
+    tag: azure-storage-queue-$1
