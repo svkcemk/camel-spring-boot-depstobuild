@@ -19,6 +19,12 @@ dependencyResolutionConfig:
         - org.springframework.session:*:*
         - org.springframework.vault:*:*
         - org.springframework.ws:*:*
+        # Skip atlassian poms and manage that manually
+        - com.atlassian.pom:*:*
+        # Skip com.google.collections-google-collections
+        - com.google.collections:google-collections:*
+        # Skip SaxonHE - no real git repository
+        - net.sf.saxon:Saxon-HE:*
         # Skip infinispan - other groups build it
         - org.infinispan:*:*
         - org.infinispan.server:*:*
