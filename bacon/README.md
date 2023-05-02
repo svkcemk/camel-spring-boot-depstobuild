@@ -21,5 +21,7 @@ will generate a config.
 
 
 ``mkdir -p ~/buildconfigs``
+
 ``cp build-config.yaml ~/buildconfigs``
+
 ``bacon pig run /Users/tcunning/buildconfigs/ --skipJavadoc``
