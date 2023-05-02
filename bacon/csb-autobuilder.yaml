@@ -4,6 +4,7 @@ dependencyResolutionConfig:
     includeArtifacts:
         - dummy:dummy:*
     recipeRepos:
+        - https://github.com/redhat-appstudio/jvm-build-data
         - https://github.com/jboss-fuse/camel-spring-boot-depstobuild
     excludeArtifacts:
         - org.springframework:*:*
@@ -19,6 +20,11 @@ dependencyResolutionConfig:
         - org.springframework.session:*:*
         - org.springframework.vault:*:*
         - org.springframework.ws:*:*
+        # dk.brics.automaton:automaton has a repository but the repo includes
+        # no tag information.
+        - dk.brics.automaton:automaton:*
+        # Cannot find a valid repo for com.google.android-annotations
+        - com.google.android:annotations:*
         # Skip atlassian poms and manage that manually
         - com.atlassian.pom:*:*
         # Skip com.google.collections-google-collections

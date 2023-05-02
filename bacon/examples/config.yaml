@@ -1,0 +1,60 @@
+# ##############################################################################
+#
+# Config for bacon
+#
+# All urls are the base paths only.
+#
+#     e.g USE http://example.co
+#
+#                 as opposed to:
+#
+#             http://example.com/path
+#
+# ##############################################################################
+ 
+# ******************************************************************************
+# PNC details
+#
+# ******************************************************************************
+profile:
+- name: "default"
+  enableExperimental: true
+  pnc:
+      url: "http://orch.psi.redhat.com"
+      bifrostBaseurl: "http://bifrost.psi.redhat.com"
+  da:
+      url: "http://da.psi.redhat.com"
+  pig:
+      licenseServiceUrl: "http://eap-prod-pkb.usersys.redhat.com"
+      indyUrl: "http://indy.psi.redhat.com"
+      kojiHubUrl: "https://brewhub.engineering.redhat.com"
+ 
+  keycloak:
+      url: "https://secure-sso-newcastle.psi.redhat.com"
+      realm: "pncredhat"
+      username: "PUTYOURUSERNAMEHERE"
+ 
+      # if regular user
+      clientId: "pncdirect"
+ 
+- name: "stage"
+  pnc:
+      url: "http://orch-stage.psi.redhat.com"
+      bifrostBaseurl: "http://bifrost-stage.psi.redhat.com"
+  da:
+      url: "http://da-stage.psi.redhat.com"
+  pig:
+      licenseServiceUrl: "http://eap-prod-pkb.usersys.redhat.com"
+      indyUrl: "http://indy-stage.psi.redhat.com"
+      kojiHubUrl: "https://brewhub.stage.engineering.redhat.com"
+ 
+  keycloak:
+      url: "https://secure-sso-newcastle-stage.psi.redhat.com"
+      realm: "pncredhat"
+      username: "PUTYOURUSERNAMEHERE"
+ 
+      # if regular user
+      clientId: "pncdirect"
+ 
+      # if service account
+      clientSecret: ""

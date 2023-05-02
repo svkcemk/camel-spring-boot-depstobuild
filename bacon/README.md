@@ -1,13 +1,26 @@
-# Bacon config generator
+# Camel and Autobuilder
 
-The documentation here : 
+## Bacon documentation
+
+In order to use the autobuilder, your first step is going to be generating a build-config.yaml that includes configuration of your third party dependencies.    Below describes the syntax of the config you will use to generate your pig build-config.yaml :
+
+Please view the  : 
 
 https://github.com/project-ncl/bacon/pull/1033/files?short_path=ef4470f#diff-ef4470fa0461b8c46ef23722bce4e077a52ba4629efaaffe9a3a3c7ee6f3d82b
 
-shows how to create a config that takes a BOM and creates PNC configs for the entries in that bom that need to be productized.
 
-In order to use this feature, you need to add enableExperimental=true to your configuration profile - I added it to my ~/.config/pnc-bacon/config.yaml and that seemed to enable the experimental features.
+In order to use this feature, you need to add enableExperimental=true to your configuration profile - I added it to my ~/.config/pnc-bacon/config.yaml and that seemed to enable the experimental features.     If you do not have a config.yaml, there's a sample one in the [examples](./examples) directory that you can use (note that you need to add your Kerberos username for the username fields)
 
-bacon experimental dependency-generator generate camel-autobuilder.yaml > camel-results.yaml
+## To run the autobuilder
 
-generates the configs.
+bacon experimental dependency-generator generate camel-autobuilder.yaml > build-config.yaml
+
+will generate a config.
+
+## To use this config
+
+``
+mkdir -p ~/buildconfigs
+cp build-config.yaml ~/buildconfigs
+bacon pig run /Users/tcunning/buildconfigs/ --skipJavadoc
+``
