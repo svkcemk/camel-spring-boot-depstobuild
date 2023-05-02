@@ -19,8 +19,7 @@ will generate a config.
 
 ## To use this config
 
-``
-mkdir -p ~/buildconfigs<br>
-cp build-config.yaml ~/buildconfigs<br>
-bacon pig run /Users/tcunning/buildconfigs/ --skipJavadoc
-``
+
+``mkdir -p ~/buildconfigs``
+``cp build-config.yaml ~/buildconfigs``
+``bacon pig run /Users/tcunning/buildconfigs/ --skipJavadoc``
