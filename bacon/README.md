@@ -13,14 +13,14 @@ In order to use this feature, you need to add enableExperimental=true to your co
 
 ## To run the autobuilder
 
-bacon experimental dependency-generator generate camel-autobuilder.yaml > build-config.yaml
+``bacon experimental dependency-generator generate camel-autobuilder.yaml > build-config.yaml``
 
 will generate a config.
 
 ## To use this config
 
 ``
-mkdir -p ~/buildconfigs
-cp build-config.yaml ~/buildconfigs
+mkdir -p ~/buildconfigs<br>
+cp build-config.yaml ~/buildconfigs<br>
 bacon pig run /Users/tcunning/buildconfigs/ --skipJavadoc
 ``
