@@ -31,4 +31,4 @@ Create a location for your build config and copy the ``build-config.yaml`` file 
 
 ### Check PNC for your results
 
-[Camel Extensions for Quarkus Third Party Components] (https://orch.psi.redhat.com/pnc-web/#/products/163/versions/387)
+[Camel Extensions for Quarkus Third Party Components](https://orch.psi.redhat.com/pnc-web/#/products/163/versions/387)
