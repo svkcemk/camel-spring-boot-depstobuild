@@ -29,6 +29,8 @@ Create a location for your build config and copy the ``build-config.yaml`` file 
 
 ``bacon pig run /Users/tcunning/buildconfigs/ --skipJavadoc``
 
+In case of errors, check the [bacon documentation](https://project-ncl.github.io/bacon/).   If you are on Mac OS X and you have not added the Red Hat Certificate to the JDK, you may need to use keytool to import it.
+
 ### Check PNC for your results
 
 [Camel Extensions for Quarkus Third Party Components](https://orch.psi.redhat.com/pnc-web/#/products/163/versions/387)
