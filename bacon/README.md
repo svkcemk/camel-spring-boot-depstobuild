@@ -19,9 +19,16 @@ will generate a config.
 
 ## To use this config
 
+Create a location for your build config and copy the ``build-config.yaml`` file that you just generated into it. 
 
 ``mkdir -p ~/buildconfigs``
 
 ``cp build-config.yaml ~/buildconfigs``
 
+### Invoke your build-config.yaml with pig
+
 ``bacon pig run /Users/tcunning/buildconfigs/ --skipJavadoc``
+
+### Check PNC for your results
+
+[Camel Extensions for Quarkus Third Party Components] (https://orch.psi.redhat.com/pnc-web/#/products/163/versions/387)
