@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/oracle/graaljs.git"
+tagMapping:
+  - pattern: (.*)
+    tag: graal-$1
