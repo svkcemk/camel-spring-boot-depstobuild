@@ -1,12 +1,19 @@
 dependencyResolutionConfig:
-    analyzeBOM: org.apache.camel.springboot:camel-spring-boot-bom:3.20.1.redhat-00031
+    analyzeBOM: org.apache.camel.springboot:camel-spring-boot-bom:4.0.0.M3-redhat-00012
     includeOptionalDependencies: true
     includeArtifacts:
-        - dummy:dummy:*
+        - org.apache.camel:*:*
+        - org.apache.camel.springboot:*:*
+        - me.snowdrop:narayana-spring-boot-recovery-controller:*
+        - me.snowdrop:narayana-spring-boot-starter:*
+        - me.snowdrop:narayana-spring-boot-core:*
+        - me.snowdrop:narayana-spring-boot-parent:*
+        - com.redhat.camel.springboot.platform:*:*
     recipeRepos:
         - https://github.com/redhat-appstudio/jvm-build-data
         - https://github.com/jboss-fuse/camel-spring-boot-depstobuild
     excludeArtifacts:
+        - org.junit.*:*:*
         - org.springframework:*:*
         - org.springframework.amqp:*:*
         - org.springframework.batch:*:*
