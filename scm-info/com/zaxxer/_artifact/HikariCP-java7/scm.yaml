@@ -1,0 +1,3 @@
+---
+type: "git"
+uri: "git+ssh://code.engineering.redhat.com/brettwooldridge/HikariCP.git"
