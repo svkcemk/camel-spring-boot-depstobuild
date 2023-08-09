@@ -2,5 +2,5 @@
 type: "git"
 uri: "https://saxonica.plan.io/saxonica/saxonmirrorhe.he.git"
 tagMapping:
-  - pattern: he_mirror_saxon_([0-9]+)_([0-9]+)
-    tag: $1.$2
+  - pattern: (.*)
+    tag: he_mirror_saxon_$1

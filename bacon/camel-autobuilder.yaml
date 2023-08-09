@@ -4,7 +4,11 @@ dependencyResolutionConfig:
     includeArtifacts:
         - org.apache.camel:*:*
         - org.apache.cxf:*:*
+    recipeRepos:
+        - https://github.com/redhat-appstudio/jvm-build-data
+        - https://github.com/jboss-fuse/camel-spring-boot-depstobuild
     excludeArtifacts:
+        - org.apache:apache:*
         - org.springframework:*:*
         - org.springframework.amqp:*:*
         - org.springframework.batch:*:*
