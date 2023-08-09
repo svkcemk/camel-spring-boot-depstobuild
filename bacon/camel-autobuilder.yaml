@@ -304,8 +304,8 @@ buildConfigGeneratorConfig:
             abbreviation: ceq-third-party
             stage: GA
             issueTrackerUrl: https://issues.redhat.com/projects/CEQ
-        version: 2.13.0
-        milestone: CQ1
+        version: 3.0.0
+        milestone: CS2
         group: Camel Extensions for Quarkus Third Party Components
         builds:
             -
