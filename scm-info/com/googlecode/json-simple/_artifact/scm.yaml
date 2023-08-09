@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/fangyidong/json-simple.git"
+tagMapping:
+  - pattern: ([0-9]+).([0-9]+)\.([0-9]+)
+    tag: tag_candidate_$1_$2_$3
