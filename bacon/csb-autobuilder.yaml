@@ -34,6 +34,14 @@ dependencyResolutionConfig:
         - com.google.android:annotations:*
         # Skip atlassian poms and manage that manually
         - com.atlassian.pom:*:*
+        - com.atlassian:*:*
+        - com.atlassian.event:*:*
+        - com.atlassian.httpclient:*:*
+        - com.atlassian.jira:*:*
+        - com.atlassian.platform:*:*
+        - com.atlassian.sal:*:*
+        - io.atlassian.fugue:*:*
+        - io.atlassian.util.concurrent:*:*
         # Skip com.google.collections-google-collections
         - com.google.collections:google-collections:*
         # Skip SaxonHE - no real git repository
@@ -579,6 +587,7 @@ dependencyResolutionConfig:
 buildConfigGeneratorConfig:
     defaultValues:
         environmentName: "OpenJDK 11.0; Mvn 3.5.4"
+        buildScript: "mvn -DskipTests clean generate-sources deploy" 
     failGeneratedBuildScript: false
     scmReplaceWithPlaceholder:
         - "forge.fusesource.com/mvnplugins.git"

@@ -1,0 +1,6 @@
+---
+type: "git"
+uri: "https://github.com/fusesource/hawtbuf.git"
+tagMapping:
+  - pattern: (.*)
+    tag: hawtbuf-project-$1

@@ -9,6 +9,9 @@ dependencyResolutionConfig:
         - https://github.com/jboss-fuse/camel-spring-boot-depstobuild
     excludeArtifacts:
         - org.apache:apache:*
+        # Skip fusesource maven plugins - maven plugins seem unnecessary to productize
+        - org.fusesource.mvnplugins:*:* 
+        # Skip springframework
         - org.springframework:*:*
         - org.springframework.amqp:*:*
         - org.springframework.batch:*:*
@@ -56,6 +59,16 @@ dependencyResolutionConfig:
         - org.sonatype.plexus:plexus-cipher:*
         # grpc
         - io.grpc:*:*
+        # Skip atlassian poms and manage that manually
+        - com.atlassian.pom:*:*
+        - com.atlassian:*:*
+        - com.atlassian.event:*:*
+        - com.atlassian.httpclient:*:*
+        - com.atlassian.jira:*:*
+        - com.atlassian.platform:*:*
+        - com.atlassian.sal:*:*
+        - io.atlassian.fugue:*:*
+        - io.atlassian.util.concurrent:*:*
         # vertx build by other groups
         - io.vertx:*:*
         # camel
@@ -269,6 +282,7 @@ dependencyResolutionConfig:
 buildConfigGeneratorConfig:
     defaultValues:
         environmentName: "OpenJDK 11.0; Mvn 3.5.4"
+        buildScript: "mvn -DskipTests clean generate-sources deploy" 
     failGeneratedBuildScript: false
     scmReplaceWithPlaceholder:
         - "forge.fusesource.com/mvnplugins.git"
