@@ -1,5 +1,5 @@
 dependencyResolutionConfig:
-    analyzeBOM: org.apache.camel:camel-parent:4.0.0.RC2-redhat-00004
+    analyzeBOM: org.apache.camel:camel-parent:4.4.0.redhat-00010
     includeOptionalDependencies: true
     includeArtifacts:
         - org.apache.camel:*:*
@@ -9,6 +9,19 @@ dependencyResolutionConfig:
         - https://github.com/jboss-fuse/camel-spring-boot-depstobuild
     excludeArtifacts:
         - org.apache:apache:*
+        # Skip jboss-parent
+        - org.jboss:jboss-parent:*
+        # Skip testcontainers
+        - org.testcontainers:*:*
+        # Large repositories
+        - org.graalvm.js:*:*
+        - com.google.android-annotations:*:*
+        - com.googlecode.json-simple:*:*
+        - org.camunda.bpm:camunda-bom:*
+        - org.ogce:xpp3:*
+        - org.fusesource:fusesource:*
+        - org.fusesource.hawtbuf:*:*
+        - org.tukaani:xz
         # Skip fusesource maven plugins - maven plugins seem unnecessary to productize
         - org.fusesource.mvnplugins:*:* 
         # Skip springframework

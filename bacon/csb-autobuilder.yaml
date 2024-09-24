@@ -1,5 +1,5 @@
 dependencyResolutionConfig:
-    analyzeBOM: org.apache.camel.springboot:camel-spring-boot-bom:4.0.0.M3-redhat-00012
+    analyzeBOM: org.apache.camel.springboot:camel-spring-boot-bom:4.4.0.redhat-00007
     includeOptionalDependencies: true
     includeArtifacts:
         - org.apache.camel:*:*
