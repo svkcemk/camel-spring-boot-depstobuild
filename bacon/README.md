@@ -2,6 +2,8 @@
 
 ## Bacon documentation
 
+https://project-ncl.github.io/bacon/guide/experimental.html
+=======
 In order to use the autobuilder, your first step is going to be generating a build-config.yaml that includes configuration of your third party dependencies.    Below describes the syntax of the config you will use to generate your pig build-config.yaml.
 
 ### Important Documentation
