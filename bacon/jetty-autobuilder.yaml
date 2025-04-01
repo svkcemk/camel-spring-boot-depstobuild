@@ -1,0 +1,57 @@
+dependencyResolutionConfig:
+    analyzeBOM: org.eclipse.jetty:jetty-bom:12.0.18
+    includeOptionalDependencies: true
+    includeArtifacts:
+        - org.eclipse.jetty:*:*
+        - org.eclipse.jetty.fcgi:*:*
+        - org.eclipse.jetty.http2:*:*
+        - org.eclipse.jetty.http3:*:*
+        - org.eclipse.jetty.quic:*:*
+        - org.eclipse.jetty.websocket:*:*
+    recipeRepos:
+        - https://github.com/redhat-appstudio/jvm-build-data
+        - https://github.com/jboss-fuse/camel-spring-boot-depstobuild
+    excludeArtifacts:
+        - com.fasterxml.jackson:*:*
+
+buildConfigGeneratorConfig:
+    defaultValues:
+        environmentName: "OpenJDK 11.0; Mvn 3.5.4"
+        buildScript: "mvn -DskipTests clean generate-sources deploy" 
+    failGeneratedBuildScript: false
+    scmReplaceWithPlaceholder:
+        - "forge.fusesource.com/mvnplugins.git"
+        - "google-maven-repository.googlecode.com/svn"
+        - "svn.apache.org"
+        - "github.com/sonatype/jvnet-parent"
+        - "code.google.com/p"
+
+    scmPattern:
+        "git@github.com:": "https://github.com/"
+
+
+    pigTemplate:
+        product:
+            name: Camel Extensions for Quarkus Third Party Components
+            abbreviation: ceq-third-party
+            stage: GA
+            issueTrackerUrl: https://issues.redhat.com/projects/CEQ
+        version: 3.0.0
+        milestone: CS2
+        group: Camel Extensions for Quarkus Third Party Components
+        builds:
+            -
+        flow:
+            licensesGeneration:
+                strategy: IGNORE
+            repositoryGeneration:
+                strategy: IGNORE
+            javadocGeneration:
+                strategy: IGNORE
+            sourcesGeneration:
+                strategy: IGNORE
+        outputPrefixes:
+            releaseFile: ab-example
+            releaseDir: ab-example
+        addons:
+            notYetAlignedFromDependencyTree:
