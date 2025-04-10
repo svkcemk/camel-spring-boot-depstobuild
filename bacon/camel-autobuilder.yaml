@@ -21,7 +21,7 @@ dependencyResolutionConfig:
         - org.ogce:xpp3:*
         - org.fusesource:fusesource:*
         - org.fusesource.hawtbuf:*:*
-        - org.tukaani:xz
+        - org.tukaani:*:*
         # Skip fusesource maven plugins - maven plugins seem unnecessary to productize
         - org.fusesource.mvnplugins:*:* 
         # Skip springframework
