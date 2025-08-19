@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.camel.quarkus</groupId>
   <version>3.20.0</version>
-  <artifactId>deps-to-build-ceq</artifactId>
+  <artifact>deps-to-build-ceq</artifact>
   <packaging>pom</packaging>
   <name>Camel Quarkus Dependencies to Build</name>
  
@@ -18,7 +18,7 @@
       <plugins>
         <plugin>
           <groupId>io.quarkus</groupId>
-          <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
+          <artifact>quarkus-platform-bom-maven-plugin</artifact>
           <version>0.0.89</version>
           <configuration>
             <!-- The main BOM to productize -->
@@ -52,8 +52,9 @@
             <includeNonManaged>true</includeNonManaged>
  
             <excludeArtifacts>
-             <artifactId>org.apache.groovy:groovy::jar:4.0.26</artifactId>
-             <artifactId>org.apache.xmlgraphics:fop::jar:2.10</artifactId>
+             <artifact>javax.cache:cache-api::jar:1.1.1</artifact>
+                <artifact>org.apache.groovy:groovy::jar:4.0.26</artifact>
+             <artifact>org.apache.xmlgraphics:fop::jar:2.10</artifact>
               <artifact>org.apache.camel:camel-groovy::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-ipfs::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-jetty-common::jar:3.20.0</artifact>
@@ -261,8 +262,8 @@
               <artifact>org.apache.camel:camel-zookeeper::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-rest-swagger::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-jooq::jar:3.20.0</artifact>
-              <artifactId>com.google.cloud:google-cloud-core::jar:2.51.0</artifactId>
-                <artifactId>org.apache.commons:commons-math3::jar:3.6.1</artifactId>
+              <artifact>com.google.cloud:google-cloud-core::jar:2.51.0</artifact>
+                <artifact>org.apache.commons:commons-math3::jar:3.6.1</artifact>
                 
                 
                 
@@ -326,7 +327,7 @@
     <plugins>
       <plugin>
         <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
+        <artifact>quarkus-platform-bom-maven-plugin</artifact>
         <executions>
           <execution>
             <phase>compile</phase>
