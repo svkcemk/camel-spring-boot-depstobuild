@@ -286,6 +286,7 @@
                 <groupId>io.debezium</groupId>
                 <groupId>org.apache.drill</groupId>
                 <groupId>com.google.code.findbugs</groupId>
+                <groupId>com.google.api.grpc</gropuId>
             </excludeGroupIds>
 
             <includeGroupIds>
