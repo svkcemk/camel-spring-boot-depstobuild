@@ -272,6 +272,7 @@
               <groupId>com.google.guava</groupId>
               <groupId>software.amazon.glue</groupId>
               <groupId>com.azure</groupId>
+              <groupId>org.jboss</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
