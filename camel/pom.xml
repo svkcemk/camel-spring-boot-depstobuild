@@ -286,6 +286,7 @@
               <groupId>org.springframework.session</groupId>
               <groupId>org.springframework.vault</groupId>
               <groupId>org.springframework.ws</groupId>
+              <gropuId>io.opentelemetry.instrumentation</groupId>
             </excludeGroupIds>
  
             <includeGroupIds>
