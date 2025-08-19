@@ -287,6 +287,7 @@
                 <groupId>org.apache.drill</groupId>
                 <groupId>com.google.code.findbugs</groupId>
                 <groupId>com.google.api.grpc</groupId>
+                <groupId>net.java</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
