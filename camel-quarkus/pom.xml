@@ -260,6 +260,7 @@
               <artifact>org.apache.camel:camel-rest-swagger::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-jooq::jar:3.20.0</artifact>
                 
+                
             </excludeArtifacts>
 
             <!-- Exclude dependencies with specific groupIds -->
@@ -277,6 +278,7 @@
               <groupId>com.braintreepayments.gateway</groupId>
               <groupId>org.jspecify</groupId>
               <groupId>org.apache.camel.maven</groupId>
+                <groupId>org.apache.cassandra</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
