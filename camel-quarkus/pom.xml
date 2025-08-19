@@ -52,7 +52,7 @@
             <includeNonManaged>true</includeNonManaged>
  
             <excludeArtifacts>
-                <artifact>org.schwering:irclib</artifact>
+                
              <artifact>javax.cache:cache-api::jar:1.1.1</artifact>
                 <artifact>org.apache.groovy:groovy::jar:4.0.26</artifact>
              <artifact>org.apache.xmlgraphics:fop::jar:2.10</artifact>
@@ -275,6 +275,7 @@
             <!-- Exclude dependencies with specific groupIds -->
             <excludeGroupIds>
               <groupId>io.quarkus</groupId>
+                <groupId>org.schwering</groupId>
               <groupId>org.apache.activemq</groupId>
               <groupId>org.sonatype.oss</groupId>
               <groupId>com.arangodb</groupId>
