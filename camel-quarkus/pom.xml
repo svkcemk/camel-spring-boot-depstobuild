@@ -264,6 +264,7 @@
                 
                 
                 
+                
             </excludeArtifacts>
 
             <!-- Exclude dependencies with specific groupIds -->
@@ -300,6 +301,7 @@
                 <groupId>org.eclipse.mylyn.github</groupId>
                 <groupId>com.google.cloud</groupId>
                 <groupId>com.google.apis</groupId>
+                <groupId>com.google.android</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
