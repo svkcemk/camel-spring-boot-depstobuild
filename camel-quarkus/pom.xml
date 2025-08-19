@@ -259,6 +259,7 @@
               <artifact>org.apache.camel:camel-zookeeper::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-rest-swagger::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-jooq::jar:3.20.0</artifact>
+              <artifactId>com.google.cloud:google-cloud-core::jar:2.51.0</artifactId>
                 
                 
                 
