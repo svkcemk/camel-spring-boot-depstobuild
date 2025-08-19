@@ -279,6 +279,7 @@
               <groupId>org.jspecify</groupId>
               <groupId>org.apache.camel.maven</groupId>
                 <groupId>org.apache.cassandra</groupId>
+                <groupId>jakarta.el</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
