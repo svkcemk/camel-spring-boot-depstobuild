@@ -262,6 +262,7 @@
                 
                 
                 
+                
             </excludeArtifacts>
 
             <!-- Exclude dependencies with specific groupIds -->
@@ -292,6 +293,7 @@
                 <groupId>com.alibaba</groupId>
                 <groupId>org.apache.flink</groupId>
                 <groupId>org.apache</groupId>
+                <groupId>com.thoughtworks.qdox</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
