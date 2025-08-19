@@ -20,12 +20,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.apache.camel.springboot</groupId>
+    <groupId>org.apache.camel.quarkus</groupId>
     <artifactId>depstobuild-generator</artifactId>
     <version>3.20.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Camel Spring Boot DepsToBuild</name>
-    <description>Dependencies to build generation for the Camel and the Camel Spring Boot project</description>
+    <name>Camel Quarkus DepsToBuild</name>
+    <description>Dependencies to build generation for the Camel and the Camel Quarkus project</description>
 
     <properties>
         <camel.surefire.parallel>true</camel.surefire.parallel>
