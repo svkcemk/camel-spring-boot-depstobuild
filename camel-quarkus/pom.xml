@@ -274,6 +274,7 @@
 
             <!-- Exclude dependencies with specific groupIds -->
             <excludeGroupIds>
+                <groupId>concurrent</groupId>
               <groupId>io.quarkus</groupId>
                 <groupId>org.schwering</groupId>
               <groupId>org.apache.activemq</groupId>
