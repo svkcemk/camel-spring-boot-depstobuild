@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.camel.springboot</groupId>
   <version>4.0.0-M3-SNAPSHOT</version>
-  <artifactId>deps-to-build-csb</artifactId>
+  <artifactId>deps-to-build-ceq</artifactId>
   <packaging>pom</packaging>
-  <name>Camel Spring Boot Dependencies to Build</name>
+  <name>Camel Quarkus Dependencies to Build</name>
  
   <properties>
-    <camel-spring-boot.version>4.0.0.M3-redhat-00012</camel-spring-boot.version>
+    <camel-quarkus.version>4.0.0.M3-redhat-00012</camel-quarkus.version>
   </properties>
  
   <build>
@@ -22,9 +22,9 @@
           <version>0.0.89</version>
           <configuration>
             <!-- The main BOM to productize -->
-            <bom>org.apache.camel.springboot:camel-spring-boot-bom:${camel-spring-boot.version}</bom>
+            <bom>org.apache.camel.quarkus:camel-quarkus-bom:3.20.0.redhat-00003</bom>
             <!-- the report file -->
-            <outputFile>target/deps-to-build-csb.txt</outputFile>
+            <outputFile>target/deps-to-build-ceq.txt</outputFile>
 
             <!-- log code repo info -->
             <logCodeRepos>true</logCodeRepos>
@@ -52,8 +52,6 @@
             <includeNonManaged>true</includeNonManaged>
  
             <excludeArtifacts>
-              <artifact>org.apache.camel:camel-spring::jar:4.0.0-M3</artifact>
-              <artifact>org.apache.camel:camel-spring-main::jar:4.0.0-M3</artifact>
               <artifact>org.apache.camel:camel-groovy::jar:4.0.0-M3</artifact>
               <artifact>org.apache.camel:camel-ipfs::jar:4.0.0-M3</artifact>
               <artifact>org.apache.camel:camel-jetty-common::jar:4.0.0-M3</artifact>
@@ -274,19 +272,7 @@
 
             <!-- Exclude dependencies with specific groupIds -->
             <excludeGroupIds>
-              <groupId>org.springframework</groupId>
-              <groupId>org.springframework.amqp</groupId>
-              <groupId>org.springframework.batch</groupId>
-              <groupId>org.springframework.boot</groupId>
-              <groupId>org.springframework.cloud</groupId>
-              <groupId>org.springframework.data</groupId>
-              <groupId>org.springframework.data.build</groupId>
-              <groupId>org.springframework.integration</groupId>
-              <groupId>org.springframework.ldap</groupId>
-              <groupId>org.springframework.security</groupId>
-              <groupId>org.springframework.session</groupId>
-              <groupId>org.springframework.vault</groupId>
-              <groupId>org.springframework.ws</groupId>
+              <groupId>io.quarkus</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
