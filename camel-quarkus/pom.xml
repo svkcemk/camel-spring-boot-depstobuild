@@ -296,6 +296,7 @@
                 <groupId>org.glassfish.hk2</groupId>
                 <groupId>org.ow2.asm</groupId>
                 <groupId>xml-resolver</groupId>
+                <groupId>io.micrometer</groupId>
                 <groupId>io.debezium</groupId>
                 <groupId>org.apache.drill</groupId>
                 <groupId>com.google.code.findbugs</groupId>
