@@ -19,7 +19,7 @@
         <plugin>
           <groupId>io.quarkus</groupId>
           <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
-          <version>0.0.74</version>
+          <version>0.0.121</version>
           <configuration>
             <!-- The main BOM to productize -->
             <bom>org.apache.camel:camel-parent:${camel.version}</bom>
