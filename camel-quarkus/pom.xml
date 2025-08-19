@@ -49,7 +49,7 @@
             <logTrees>false</logTrees>
             <htmlReport>false</htmlReport>
  
-            <includeNonManaged>true</includeNonManaged>
+            <includeNonManaged>fale</includeNonManaged>
  
             <excludeArtifacts>
                 
@@ -323,7 +323,7 @@
               <key>xxx</key>
             </includeKeys>
             -->
- 
+
           </configuration>
         </plugin>
       </plugins>
