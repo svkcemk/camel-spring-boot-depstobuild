@@ -273,6 +273,7 @@
               <groupId>software.amazon.glue</groupId>
               <groupId>com.azure</groupId>
               <groupId>org.jboss</groupId>
+              groupId>com.braintreepayments.gateway</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
