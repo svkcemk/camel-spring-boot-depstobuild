@@ -280,6 +280,7 @@
               <groupId>org.apache.camel.maven</groupId>
                 <groupId>org.apache.cassandra</groupId>
                 <groupId>jakarta.el</groupId>
+                <groupId>org.glassfish.hk2</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
