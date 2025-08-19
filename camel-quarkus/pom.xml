@@ -270,6 +270,7 @@
               <groupId>org.bouncycastle</groupId>
               <groupId>com.beanit</groupId>
               <groupId>com.google.guava</groupId>
+              <groupId>software.amazon.glue</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
