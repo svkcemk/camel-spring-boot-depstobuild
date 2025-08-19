@@ -282,6 +282,7 @@
                 <groupId>jakarta.el</groupId>
                 <groupId>org.glassfish.hk2</groupId>
                 <groupId>org.ow2.asm</groupId>
+                <gropuId>xml-resolver</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
