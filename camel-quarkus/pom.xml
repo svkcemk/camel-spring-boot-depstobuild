@@ -274,7 +274,7 @@
               <groupId>com.azure</groupId>
               <groupId>org.jboss</groupId>
               <groupId>com.braintreepayments.gateway</groupId>
-              <groupId>org.jspecify<groupId>
+              <groupId>org.jspecify</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
