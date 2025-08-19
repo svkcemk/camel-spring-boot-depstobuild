@@ -265,6 +265,7 @@
             <excludeGroupIds>
               <groupId>io.quarkus</groupId>
               <groupId>org.apache.activemq</groupId>
+              <groupId>org.sonatype.oss</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
