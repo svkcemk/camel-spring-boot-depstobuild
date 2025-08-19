@@ -303,6 +303,7 @@
                 <groupId>com.google.apis</groupId>
                 <groupId>com.google.android</groupId>
                 <groupId>org.eclipse.neoscada.protocols</groupId>
+                <groupId>org.eclipse.neoscada.utils</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
