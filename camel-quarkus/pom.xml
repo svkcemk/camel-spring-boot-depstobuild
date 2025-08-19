@@ -284,6 +284,7 @@
                 <groupId>org.ow2.asm</groupId>
                 <groupId>xml-resolver</groupId>
                 <groupId>io.debezium</groupId>
+                <groupId>org.apache.drill</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
