@@ -294,6 +294,7 @@
                 <groupId>org.apache.flink</groupId>
                 <groupId>org.apache</groupId>
                 <groupId>com.thoughtworks.qdox</groupId>
+                <groupId>xml-apis</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
