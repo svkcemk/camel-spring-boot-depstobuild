@@ -264,6 +264,7 @@
             <!-- Exclude dependencies with specific groupIds -->
             <excludeGroupIds>
               <groupId>io.quarkus</groupId>
+              <groupId>org.apache.activemq</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
