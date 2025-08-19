@@ -34,7 +34,7 @@
 
     <modules>
         <module>camel</module>
-        <module>camel-spring-boot</module>
+        <module>camel-quarkus</module>
     </modules>
 
 </project>
