@@ -9,7 +9,7 @@
   <name>Camel Quarkus Dependencies to Build</name>
  
   <properties>
-    <camel-quarkus.version>4.0.0.M3-redhat-00012</camel-quarkus.version>
+    <camel-quarkus.version>4.10.3.redhat-00005</camel-quarkus.version>
   </properties>
  
   <build>
