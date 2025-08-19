@@ -295,6 +295,7 @@
                 <groupId>org.apache</groupId>
                 <groupId>com.thoughtworks.qdox</groupId>
                 <groupId>xml-apis</groupId>
+                <groupId>org.eclipse.jgit</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
