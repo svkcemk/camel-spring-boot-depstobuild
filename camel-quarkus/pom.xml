@@ -52,6 +52,7 @@
             <includeNonManaged>true</includeNonManaged>
  
             <excludeArtifacts>
+             <artifactId>org.apache.xmlgraphics:fop::jar:2.10</artifactId>
               <artifact>org.apache.camel:camel-groovy::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-ipfs::jar:3.20.0</artifact>
               <artifact>org.apache.camel:camel-jetty-common::jar:3.20.0</artifact>
