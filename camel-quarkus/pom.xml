@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.apache.camel.quarkus</groupId>
   <version>3.20.0</version>
-  <artifact>deps-to-build-ceq</artifact>
+  <artifactId>deps-to-build-ceq</artifactId>
   <packaging>pom</packaging>
   <name>Camel Quarkus Dependencies to Build</name>
  
@@ -18,7 +18,7 @@
       <plugins>
         <plugin>
           <groupId>io.quarkus</groupId>
-          <artifact>quarkus-platform-bom-maven-plugin</artifact>
+          <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
           <version>0.0.89</version>
           <configuration>
             <!-- The main BOM to productize -->
@@ -327,7 +327,7 @@
     <plugins>
       <plugin>
         <groupId>io.quarkus</groupId>
-        <artifact>quarkus-platform-bom-maven-plugin</artifact>
+        <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
         <executions>
           <execution>
             <phase>compile</phase>
