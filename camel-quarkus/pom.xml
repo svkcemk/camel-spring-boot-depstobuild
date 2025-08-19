@@ -298,6 +298,7 @@
                 <groupId>xml-apis</groupId>
                 <groupId>org.eclipse.jgit</groupId>
                 <groupId>org.eclipse.mylyn.github</groupId>
+                <groupId>com.google.cloud</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
