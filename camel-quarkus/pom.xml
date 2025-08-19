@@ -285,6 +285,7 @@
                 <groupId>xml-resolver</groupId>
                 <groupId>io.debezium</groupId>
                 <groupId>org.apache.drill</groupId>
+                <groupId>com.google.code.findbugs</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
