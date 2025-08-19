@@ -267,6 +267,7 @@
               <groupId>org.apache.activemq</groupId>
               <groupId>org.sonatype.oss</groupId>
               <groupId>com.arangodb</groupId>
+              <groupId>org.bouncycastle</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
