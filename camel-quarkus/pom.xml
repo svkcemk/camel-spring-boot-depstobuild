@@ -288,6 +288,7 @@
                 <groupId>com.google.code.findbugs</groupId>
                 <groupId>com.google.api.grpc</groupId>
                 <groupId>net.java</groupId>
+                <groupId>com.alibaba</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
