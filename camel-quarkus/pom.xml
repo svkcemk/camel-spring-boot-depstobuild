@@ -288,6 +288,7 @@
               <groupId>org.jboss</groupId>
               <groupId>com.braintreepayments.gateway</groupId>
               <groupId>org.jspecify</groupId>
+                <groupId>org.apache.kudu</groupId>
               <groupId>org.apache.camel.maven</groupId>
                 <groupId>org.graalvm.js</groupId>
                 <groupId>org.apache.cassandra</groupId>
