@@ -283,6 +283,7 @@
                 <groupId>org.glassfish.hk2</groupId>
                 <groupId>org.ow2.asm</groupId>
                 <groupId>xml-resolver</groupId>
+                <groupId>io.debezium</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
