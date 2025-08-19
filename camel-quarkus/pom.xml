@@ -291,6 +291,7 @@
                 <groupId>net.java</groupId>
                 <groupId>com.alibaba</groupId>
                 <groupId>org.apache.flink</groupId>
+                <groupId>org.apache</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
