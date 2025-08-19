@@ -281,6 +281,7 @@
               <groupId>org.sonatype.oss</groupId>
               <groupId>com.arangodb</groupId>
               <groupId>org.bouncycastle</groupId>
+                <groupId>org.web3j</groupId>
               <groupId>com.beanit</groupId>
               <groupId>com.google.guava</groupId>
               <groupId>software.amazon.glue</groupId>
