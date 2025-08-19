@@ -302,6 +302,7 @@
                 <groupId>com.google.cloud</groupId>
                 <groupId>com.google.apis</groupId>
                 <groupId>com.google.android</groupId>
+                <groupId>org.eclipse.neoscada.protocols</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
