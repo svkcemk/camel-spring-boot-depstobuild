@@ -271,6 +271,7 @@
               <groupId>com.beanit</groupId>
               <groupId>com.google.guava</groupId>
               <groupId>software.amazon.glue</groupId>
+              <groupId>com.azure</groupId>
             </excludeGroupIds>
 
             <includeGroupIds>
