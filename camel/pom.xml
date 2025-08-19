@@ -269,6 +269,7 @@
               <artifact>org.apache.camel:camel-zookeeper::jar:3.20.1</artifact>
               <artifact>org.apache.camel:camel-rest-swagger::jar:3.20.1</artifact>
               <artifact>org.apache.camel:camel-jooq::jar:3.20.1</artifact>
+            
             </excludeArtifacts>
 
             <!-- Exclude dependencies with specific groupIds -->
@@ -287,6 +288,7 @@
               <groupId>org.springframework.vault</groupId>
               <groupId>org.springframework.ws</groupId>
               <groupId>io.opentelemetry.instrumentation</groupId>
+                <groupId>org.apache.camel.maven</groupId>
             </excludeGroupIds>
  
             <includeGroupIds>
