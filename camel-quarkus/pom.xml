@@ -1,350 +1,349 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+<project
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.apache.camel.quarkus</groupId>
-  <version>3.20.0</version>
-  <artifactId>deps-to-build-ceq</artifactId>
-  <packaging>pom</packaging>
-  <name>Camel Quarkus Dependencies to Build</name>
- 
-  <properties>
-    <camel-quarkus.version>3.20.0.redhat-00003</camel-quarkus.version>
-  </properties>
- 
-  <build>
-    <defaultGoal>quarkus-platform-bom:deps-to-rebuild</defaultGoal>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>io.quarkus</groupId>
-          <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
-          <version>0.0.89</version>
-          <configuration>
-            <!-- The main BOM to productize -->
-            <bom>org.apache.camel.quarkus:camel-quarkus-bom:3.20.0.redhat-00003</bom>
-            <!-- the report file -->
-            <outputFile>target/deps-to-build-ceq.txt</outputFile>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.apache.camel.quarkus</groupId>
+    <version>3.20.0</version>
+    <artifactId>deps-to-build-ceq</artifactId>
+    <packaging>pom</packaging>
+    <name>Camel Quarkus Dependencies to Build</name>
 
-            <!-- log code repo info -->
-            <logCodeRepos>true</logCodeRepos>
-            <!-- log artifact coordinates in GAV format instead of GACTV -->
-            <logModulesToBuild>false</logModulesToBuild>
-            <warnOnResolutionErrors>true</warnOnResolutionErrors>
- 
-            <!--
+    <properties>
+        <camel-quarkus.version>3.20.0.redhat-00003</camel-quarkus.version>
+    </properties>
+
+    <build>
+        <defaultGoal>quarkus-platform-bom:deps-to-rebuild</defaultGoal>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.quarkus</groupId>
+                    <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
+                    <version>0.0.89</version>
+                    <configuration>
+                        <!-- The main BOM to productize -->
+                        <bom>org.apache.camel.quarkus:camel-quarkus-bom:3.20.0.redhat-00003</bom>
+                        <!-- the report file -->
+                        <outputFile>target/deps-to-build-ceq.txt</outputFile>
+
+                        <!-- log code repo info -->
+                        <logCodeRepos>true</logCodeRepos>
+                        <!-- log artifact coordinates in GAV format instead of GACTV -->
+                        <logModulesToBuild>false</logModulesToBuild>
+                        <warnOnResolutionErrors>true</warnOnResolutionErrors>
+
+                        <!--
             Top level artifacts to build. If not configured, all the dependencies with groupId
             matching the BOM groupId will be selected as top level artifacts to be built from source.
             <topLevelArtifactsToBuild>
               <artifact>io.vertx:vertx-codegen:${camel.version}</artifact>
             </topLevelArtifactsToBuild>
             -->
- 
-            <!-- Dependency levels to build. If not configured only the managed dependencies will be selected on all levels
+
+                        <!-- Dependency levels to build. If not configured only the managed
+                        dependencies will be selected on all levels
             <level>0</level>
             -->
- 
-            <!-- To include dependency trees in the report -->
 
-            <logTrees>false</logTrees>
-            <htmlReport>false</htmlReport>
- 
-            <includeNonManaged>fale</includeNonManaged>
- 
-            <excludeArtifacts>
-                
-             <artifact>javax.cache:cache-api::jar:1.1.1</artifact>
-                <artifact>org.apache.groovy:groovy::jar:4.0.26</artifact>
-             <artifact>org.apache.xmlgraphics:fop::jar:2.10</artifact>
-              <artifact>org.apache.camel:camel-groovy::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ipfs::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jetty-common::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jetty::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-undertow::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-service::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-activemq::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-any23::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-arangodb::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-as2::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-asn1::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-asterisk::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-atlasmap::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-atmos::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-atmosphere-websocket::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-atom::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-avro-rpc::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-barcode::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-base64::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-bonita::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-box::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-braintree::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-caffeine::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-caffeine-lrucache::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-cbor::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-cdi::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-cdi-main::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-cdi-jta::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-chatscript::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-chunk::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-cm-sms::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-cmis::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-coap::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-cometd::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-consul::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-corda::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-couchbase::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-couchdb::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-crypto::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-csimple-joor::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-csv::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-datasonnet::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-debug::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-debezium::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-digitalocean::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-disruptor::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-djl::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-dns::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-docker::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-dozer::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-drill::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-dropbox::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-dynamic-router::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ehcache::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-elasticsearch-rest::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-elytron::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-etcd3::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-exec::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-facebook::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-fastjson::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-file-watch::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-flatpack::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-flink::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-fop::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-freemarker::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-geocoder::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-git::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-github::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-gora::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-grape::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-graphql::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-grok::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-grpc::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-guava-eventbus::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-hashicorp-vault::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-hazelcast::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-hbase::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-hdfs::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-headersmap::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-huawei::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-hyperledger-aries::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ical::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-iec60870::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ignite::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-influxdb::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-influxdb2::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-iota::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-irc::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ironmq::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jasypt::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-javascript::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jbpm::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jcache::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jclouds::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jcr::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jdbc::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jgroups-raft::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jgroups::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jmx::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-johnzon::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jolt::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-joor::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jq::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jsch::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-json-validator::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jsonapi::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jsonata::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jsonb::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-json-patch::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jt400::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-kudu::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ldap::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ldif::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-leveldb::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-lra::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-lucene::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-lumberjack::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-lzf::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-metrics::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-micrometer::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-milo::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-mina::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-mongodb-gridfs::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-mustache::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-mvel::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-mybatis::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-netty-http::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-nitrite::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-oaipmh::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ognl::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-olingo2::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-olingo4::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-openstack::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-opentracing::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-optaplanner::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-pdf::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-pg-replication-slot::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-pgevent::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-plc4x::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-printer::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-protobuf::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-pubnub::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-pulsar::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-python::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-quickfix::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-rabbitmq::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-reactive-executor-tomcat::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-reactive-executor-vertx::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-reactive-streams::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-reactor::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-redis::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-resourceresolver-github::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-resteasy::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-robotframework::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-rocketmq::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-rss::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-rxjava::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-sap-netweaver::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-schematron::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-servicenow::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-shiro::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-sjms2::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-sjms::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-smpp::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-snakeyaml::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-snmp::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-solr::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-spark::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-splunk::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-splunk-hec::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-ssh::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-stax::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-stomp::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-stream::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-stringtemplate::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-stitch::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-swagger-java::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-swift::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-syslog::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-tarfile::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-threadpoolfactory-vertx::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-thrift::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-tika::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-twilio::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-twitter::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-univocity-parsers::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-wal::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-weather::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-web3j::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-websocket-jsr356::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-websocket::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-weka::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-whatsapp::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-wordpress::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-workday::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-xchange::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-xj::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-xmlsecurity::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-xmpp::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-xslt-saxon::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-xstream::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-zendesk::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-zipkin::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-zookeeper-master::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-zookeeper::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-rest-swagger::jar:3.20.0</artifact>
-              <artifact>org.apache.camel:camel-jooq::jar:3.20.0</artifact>
-              <artifact>com.google.cloud:google-cloud-core::jar:2.51.0</artifact>
-                <artifact>org.apache.commons:commons-math3::jar:3.6.1</artifact>
-                
-                
-                
-                
-                
-            </excludeArtifacts>
+                        <!-- To include dependency trees in the report -->
 
-            <!-- Exclude dependencies with specific groupIds -->
-            <excludeGroupIds>
-                <groupId>concurrent</groupId>
-              <groupId>io.quarkus</groupId>
-                <groupId>org.schwering</groupId>
-              <groupId>org.apache.activemq</groupId>
-              <groupId>org.sonatype.oss</groupId>
-              <groupId>com.arangodb</groupId>
-              <groupId>org.bouncycastle</groupId>
-                <groupId>org.web3j</groupId>
-              <groupId>com.beanit</groupId>
-              <groupId>com.google.guava</groupId>
-              <groupId>software.amazon.glue</groupId>
-              <groupId>com.azure</groupId>
-              <groupId>org.jboss</groupId>
-              <groupId>com.braintreepayments.gateway</groupId>
-              <groupId>org.jspecify</groupId>
-                <groupId>org.apache.kudu</groupId>
-              <groupId>org.apache.camel.maven</groupId>
-                <groupId>org.graalvm.js</groupId>
-                <groupId>org.apache.cassandra</groupId>
-                <groupId>jakarta.el</groupId>
-                <groupId>org.glassfish.hk2</groupId>
-                <groupId>org.ow2.asm</groupId>
-                <groupId>xml-resolver</groupId>
-                <groupId>io.micrometer</groupId>
-                <groupId>io.debezium</groupId>
-                <groupId>org.apache.drill</groupId>
-                <groupId>com.google.code.findbugs</groupId>
-                <groupId>com.google.api.grpc</groupId>
-                <groupId>net.java</groupId>
-                <groupId>com.alibaba</groupId>
-                <groupId>org.apache.flink</groupId>
-                <groupId>org.apache</groupId>
-                <groupId>com.thoughtworks.qdox</groupId>
-                <groupId>xml-apis</groupId>
-                <groupId>org.eclipse.jgit</groupId>
-                <groupId>org.eclipse.mylyn.github</groupId>
-                <groupId>com.google.cloud</groupId>
-                <groupId>com.google.apis</groupId>
-                <groupId>com.google.android</groupId>
-                <groupId>org.eclipse.neoscada.protocols</groupId>
-                <groupId>org.eclipse.neoscada.utils</groupId>
-            </excludeGroupIds>
+                        <logTrees>false</logTrees>
+                        <htmlReport>false</htmlReport>
 
-            <includeGroupIds>
-              <groupId>org.apache.camel</groupId>
-            </includeGroupIds>
- 
-            <!-- Include dependencies with the following groupIds
+                        <includeNonManaged>fale</includeNonManaged>
+
+                        <excludeArtifacts>
+
+                            <artifact>javax.cache:cache-api::jar:1.1.1</artifact>
+                            <artifact>org.apache.groovy:groovy::jar:4.0.26</artifact>
+                            <artifact>org.apache.xmlgraphics:fop::jar:2.10</artifact>
+                            <artifact>org.apache.camel:camel-groovy::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ipfs::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jetty-common::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jetty::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-undertow::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-service::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-activemq::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-any23::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-arangodb::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-as2::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-asn1::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-asterisk::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-atlasmap::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-atmos::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-atmosphere-websocket::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-atom::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-avro-rpc::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-barcode::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-base64::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-bonita::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-box::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-braintree::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-caffeine::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-caffeine-lrucache::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-cbor::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-cdi::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-cdi-main::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-cdi-jta::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-chatscript::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-chunk::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-cm-sms::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-cmis::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-coap::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-cometd::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-consul::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-corda::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-couchbase::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-couchdb::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-crypto::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-csimple-joor::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-csv::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-datasonnet::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-debug::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-debezium::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-digitalocean::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-disruptor::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-djl::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-dns::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-docker::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-dozer::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-drill::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-dropbox::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-dynamic-router::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ehcache::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-elasticsearch-rest::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-elytron::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-etcd3::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-exec::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-facebook::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-fastjson::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-file-watch::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-flatpack::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-flink::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-fop::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-freemarker::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-geocoder::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-git::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-github::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-gora::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-grape::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-graphql::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-grok::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-grpc::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-guava-eventbus::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-hashicorp-vault::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-hazelcast::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-hbase::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-hdfs::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-headersmap::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-huawei::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-hyperledger-aries::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ical::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-iec60870::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ignite::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-influxdb::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-influxdb2::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-iota::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-irc::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ironmq::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jasypt::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-javascript::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jbpm::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jcache::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jclouds::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jcr::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jdbc::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jgroups-raft::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jgroups::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jmx::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-johnzon::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jolt::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-joor::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jq::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jsch::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-json-validator::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jsonapi::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jsonata::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jsonb::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-json-patch::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jt400::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-kudu::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ldap::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ldif::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-leveldb::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-lra::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-lucene::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-lumberjack::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-lzf::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-metrics::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-micrometer::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-milo::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-mina::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-mongodb-gridfs::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-mustache::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-mvel::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-mybatis::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-netty-http::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-nitrite::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-oaipmh::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ognl::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-olingo2::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-olingo4::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-openstack::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-opentracing::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-optaplanner::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-pdf::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-pg-replication-slot::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-pgevent::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-plc4x::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-printer::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-protobuf::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-pubnub::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-pulsar::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-python::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-quickfix::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-rabbitmq::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-reactive-executor-tomcat::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-reactive-executor-vertx::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-reactive-streams::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-reactor::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-redis::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-resourceresolver-github::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-resteasy::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-robotframework::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-rocketmq::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-rss::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-rxjava::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-sap-netweaver::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-schematron::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-servicenow::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-shiro::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-sjms2::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-sjms::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-smpp::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-snakeyaml::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-snmp::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-solr::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-spark::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-splunk::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-splunk-hec::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-ssh::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-stax::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-stomp::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-stream::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-stringtemplate::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-stitch::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-swagger-java::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-swift::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-syslog::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-tarfile::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-threadpoolfactory-vertx::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-thrift::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-tika::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-twilio::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-twitter::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-univocity-parsers::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-wal::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-weather::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-web3j::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-websocket-jsr356::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-websocket::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-weka::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-whatsapp::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-wordpress::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-workday::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-xchange::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-xj::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-xmlsecurity::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-xmpp::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-xslt-saxon::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-xstream::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-zendesk::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-zipkin::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-zookeeper-master::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-zookeeper::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-rest-swagger::jar:3.20.0</artifact>
+                            <artifact>org.apache.camel:camel-jooq::jar:3.20.0</artifact>
+                            <artifact>com.google.cloud:google-cloud-core::jar:2.51.0</artifact>
+                            <artifact>org.apache.commons:commons-math3::jar:3.6.1</artifact>
+
+
+                        </excludeArtifacts>
+
+                        <!-- Exclude dependencies with specific groupIds -->
+                        <excludeGroupIds>
+                            <groupId>concurrent</groupId>
+                            <groupId>io.quarkus</groupId>
+                            <groupId>org.schwering</groupId>
+                            <groupId>org.apache.activemq</groupId>
+                            <groupId>org.sonatype.oss</groupId>
+                            <groupId>com.arangodb</groupId>
+                            <groupId>org.bouncycastle</groupId>
+                            <groupId>org.web3j</groupId>
+                            <groupId>com.beanit</groupId>
+                            <groupId>com.google.guava</groupId>
+                            <groupId>software.amazon.glue</groupId>
+                            <groupId>com.azure</groupId>
+                            <groupId>org.jboss</groupId>
+                            <groupId>com.braintreepayments.gateway</groupId>
+                            <groupId>org.jspecify</groupId>
+                            <groupId>org.apache.kudu</groupId>
+                            <groupId>org.apache.camel.maven</groupId>
+                            <groupId>org.graalvm.js</groupId>
+                            <groupId>org.apache.cassandra</groupId>
+                            <groupId>jakarta.el</groupId>
+                            <groupId>org.glassfish.hk2</groupId>
+                            <groupId>org.ow2.asm</groupId>
+                            <groupId>xml-resolver</groupId>
+                            <groupId>io.micrometer</groupId>
+                            <groupId>io.debezium</groupId>
+                            <groupId>org.apache.drill</groupId>
+                            <groupId>com.google.code.findbugs</groupId>
+                            <groupId>com.google.api.grpc</groupId>
+                            <groupId>net.java</groupId>
+                            <groupId>com.alibaba</groupId>
+                            <groupId>org.apache.flink</groupId>
+                            <groupId>org.apache</groupId>
+                            <groupId>com.thoughtworks.qdox</groupId>
+                            <groupId>xml-apis</groupId>
+                            <groupId>org.eclipse.jgit</groupId>
+                            <groupId>org.eclipse.mylyn.github</groupId>
+                            <groupId>com.google.cloud</groupId>
+                            <groupId>com.google.apis</groupId>
+                            <groupId>com.google.android</groupId>
+                            <groupId>org.eclipse.neoscada.protocols</groupId>
+                            <groupId>org.eclipse.neoscada.utils</groupId>
+                        </excludeGroupIds>
+
+                        <includeGroupIds>
+                            <groupId>org.apache.camel</groupId>
+                        </includeGroupIds>
+
+                        <!-- Include dependencies with the following groupIds
             <includeKeys>
               <key>xxx</key>
             </includeKeys>
             -->
 
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>io.quarkus</groupId>
-        <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>compile</phase>
-            <goals>
-              <goal>deps-to-rebuild</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-platform-bom-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>deps-to-rebuild</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
-
