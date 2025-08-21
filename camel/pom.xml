@@ -288,7 +288,7 @@
               <groupId>org.springframework.vault</groupId>
               <groupId>org.springframework.ws</groupId>
               <groupId>io.opentelemetry.instrumentation</groupId>
-                <groupId>org.apache.camel.maven</groupId>
+               <groupId>org.apache.camel.maven</groupId>
             </excludeGroupIds>
  
             <includeGroupIds>
